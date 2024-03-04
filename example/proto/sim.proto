@@ -1,0 +1,16 @@
+syntax = "proto3";
+package proto;
+
+option go_package = "rregist/example/proto";
+
+message SimpleRequest{
+    string key = 1;
+}
+
+message SimpleResponse {
+    string val = 1;
+}
+
+service Simple{
+    rpc GetKey (SimpleRequest) returns (SimpleResponse){};
+}
